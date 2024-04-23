@@ -19,8 +19,8 @@ library(dplyr)
 xaringanExtra::use_xaringan_extra(c("tile_view", "animate_css", "scribble", "search", "webcam", "clipboard", "fit_screen", "tachyons", "editable")) 
 # xaringanExtra::use_animate_all("slide_left")
 # xaringanExtra::use_logo(
-#   image_url = "https://en.wikipedia.org/wiki/Biogen#/media/File:Biogen.svg",
-#   link_url = "https://www.biogen.com/"
+#   image_url = "https://en.wikipedia.org/wiki/ARCUS#/media/File:Arcus.svg",
+#   link_url = "https://www.arcusbio.com/"
 # )
 xaringanExtra::use_extra_styles(
   hover_code_line = TRUE,         #<<
