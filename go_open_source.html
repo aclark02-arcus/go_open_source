@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>go_open_source.knit</title>
+    <meta charset="utf-8" />
+    <script src="libs/header-attrs-2.26/header-attrs.js"></script>
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+    <link href="libs/tile-view-0.2.6/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view-0.2.6/tile-view.js"></script>
+    <link href="libs/animate.css-3.7.2/animate.xaringan.css" rel="stylesheet" />
+    <link href="libs/tachyons-4.12.0/tachyons.min.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra_fit-screen-0.2.6/fit-screen.js"></script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"ba439e5a5ca2413ea8c360cdf6b5ecf2","expires":14}</script>
+    <script src="libs/himalaya-1.1.0/himalaya.js"></script>
+    <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
+    <link href="libs/editable-0.2.6/editable.css" rel="stylesheet" />
+    <script src="libs/editable-0.2.6/editable.js"></script>
+    <script src="libs/xaringanExtra-webcam-0.0.1/webcam.js"></script>
+    <script id="xaringanExtra-webcam-options" type="application/json">{"width":"200","height":"200","margin":"1em"}</script>
+    <script src="libs/clipboard-2.0.6/clipboard.min.js"></script>
+    <link href="libs/xaringanExtra-clipboard-0.2.6/xaringanExtra-clipboard.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-clipboard-0.2.6/xaringanExtra-clipboard.js"></script>
+    <script>window.xaringanExtraClipboard(null, {"button":"Copy Code","success":"Copied!","error":"Press Ctrl+C to Copy"})</script>
+    <script src="libs/mark.js-8.11.1/mark.min.js"></script>
+    <link href="libs/xaringanExtra-search-0.0.1/search.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-search-0.0.1/search.js"></script>
+    <script>window.addEventListener('load', function() { window.xeSearch = new RemarkSearch({"position":"bottom-left","caseSensitive":false,"showIcon":false,"autoSearch":true}) })</script>
+    <script src="libs/fabric-4.3.1/fabric.min.js"></script>
+    <link href="libs/xaringanExtra-scribble-0.0.1/scribble.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-scribble-0.0.1/scribble.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', function() { window.xeScribble = new Scribble({"pen_color":["#FF0000"],"pen_size":3,"eraser_size":30,"palette":[]}) })</script>
+    <link href="libs/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+
+
+layout: false
+class: title-slide, inverse, middle, right, main_slide
+name: title-slide
+
+
+# Going Open Source
+## Consolidating thoughts, resources, &amp; best practices
+### [slides URL](http://wmrug.org)
+
+
+
+---
+
+layout: false
+class: middle, center
+name: what
+
+
+You are not the first person to have done this project, but you've done it really well.
+
+---
+
+# What does "going open-source" mean?
+
+Convert the code into a template that folks can use to pivot into their needs. The point of going open-source is to propel the industry forward, by adopting a centralized methods for accomplishing a certain task or workflow. 
+
+--- 
+
+# But what does it really mean?
+
+It means that you as a maintainer don't exist to serve other's needs. But it does mean, you act as a steward of the code to help guide and direct it towards its highest and best use.
+
+The repo exists to help other's engage with the code project and contribute meaningful ideas and/or code to make it better over time.
+
+---
+
+# Selfish Perks:
+- You can get valuable external feedback, potential identify "blind spots" that you had during development
+- Could gain "free" resources that help contribute towards future goals of the project
+- Putting your code out there helps you &amp; your organization point to a high-caliber project which could be used for recruitment purposes.
+
+---
+
+# Assurances:
+- No sharing of private data, ever
+  - Openly, we can share publicly available data, dummy data, or simulated data
+- No invitations to outside collaborators
+	- You as a GitHub Org &amp; Admin can control who wishes to contribute code to the repository.
+- No compromising code
+	- (1) only trusted developers will be on the project, as mentioned above
+	- (2) You can set branch protection rules to dictate when code can be merged
+	- (3) You can always revert changes - the beauty of version control!
+	- More on this later!
+
+---
+
+# Where to host the code:
+- GCP-Service International's own GitHub page
+- Small private collab space between GCP &amp; a few other orgs
+- Pharma open-source incubators
+	- [pharmaverse](https://github.com/pharmaverse)
+	- [openpharma](https://github.com/openpharma)
+	- [Open Source In Pharma](https://github.com/opensourceinpharma)... previously r/Pharma
+	- [Phuse](https://github.com/phuse-org)
+	- [R Consortium](https://github.com/RConsortium)
+	
+Notes: there are benefits from working from a perceived "neutral host" location
+
+
+--- 
+
+# Initial collaboration questions:
+
+- Where are you at in development?
+	- Experimental
+	- stable
+	- sun-setting
+- How much time do you want to put into this project?
+- How many contributors do you already have? How many resources (time &amp; energy) do we all have? Be realistic
+
+
+---
+
+# Code Quality guardrails, templates, &amp; guides:
+Collaboration guide: https://devguide.ropensci.org/maintenance_collaboration.html
+
+{gt} has a great guide for contributors:
+https://github.com/rstudio/gt/blob/master/.github/CONTRIBUTING.md
+---
+
+## First time contributors
+https://pharmaverse.github.io/blog/posts/2024-03-11_tips_for__first_.../tips_for__first__time__contributors.html
+
+---
+
+# Code Review Principles
+https://code-review.tidyverse.org/
+
+## Examples:
+PR checklist: https://github.com/pharmaR/riskassessment/wiki/Developer-Pull-Request-workflows
+PR review schedule: https://github.com/pharmaR/riskassessment/wiki/Developer-PR-Review-Scheduling
+
+
+---
+
+# Automation through GitHub Actions
+	- R CMD Check
+	- Tests
+	- Lintr
+	- Style Guides
+
+---
+
+# Project planning
+
+It's about the conversation that creates the plan
+- Project roles
+- Motivation
+- Aims
+- Anti-aims
+- Proposal
+- Communications
+- Resources
+
+### Template:
+https://tinyurl.com/os-project-planning
+
+---
+
+Governance structures
+Conflict resolution
+
+---
+
+# Potential fears
+As a maintainer, you are not a slave to the community. You don't live to serve them. You already served them by sharing code. They now how an opportunity to engage with that code experiment. We can manage expectations in the README &amp; contributing guidelines and code of conduct. You can point to these things and say: "we don't do that here".
+
+Someone's going to incorporate bugs. That's what unit tests are for! And CI!
+
+Will I be tied to maintaining this the rest of my life? It's also okay to abandon projects. Someone else can pick up if they need.
+
+---
+
+# Other considerations
+- Licensing
+- create new github handles tied to your employer? Arcus &amp; pfizer do it
+
+
+---
+
+# Summary:
+It's worth the time to learn to open-source.
+
+---
+
+# "Paying maintainers"
+blog: blog.tidelift.com/paying-maintainers-the-howto
+
+
+---
+
+
+
+
+
+&lt;!-- --- --&gt;
+
+&lt;!-- # What is *user adoption*? --&gt;
+
+&lt;!-- .bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[ --&gt;
+&lt;!-- User adoption, sometimes just called onboarding, is the process by which new users become acclimated to a product or service and decide to keep using it. Users only adopt a product if it helps them achieve a goal of theirs. --&gt;
+
+&lt;!-- .tr[ --&gt;
+&lt;!-- — Jenny Booth --&gt;
+&lt;!-- ]] --&gt;
+
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- Source: [mixpanel.com](https://mixpanel.com/blog/how-to-develop-and-measure-a-user-adoption-strategy/#:~:text=User%20adoption%2C%20sometimes%20called%20onboarding,food%20or%20launching%20a%20business) --&gt;
+
+&lt;!-- --- --&gt;
+
+&lt;!-- # Why do I care? --&gt;
+
+&lt;!-- * As a shiny developer, we often times spend vast amounts of time programming a user experience everyone can appreciate, so having people use and appreciate your hard work feels good, and it means you've created something truly valuable. --&gt;
+
+
+&lt;!-- ![work too hard](images/work_too_hard.gif) --&gt;
+
+&lt;!-- [gif source](https://media4.giphy.com/media/AYECTMLNS4o67dCoeY/giphy-downsized-large.gif) --&gt;
+
+&lt;!-- --- --&gt;
+
+&lt;!-- ## If people aren't using your app --&gt;
+
+&lt;!-- You probably... --&gt;
+
+
+&lt;!-- * misunderstood your stakeholders goals/ needs --&gt;
+&lt;!-- * made it too difficult to achieve their goals/ needs --&gt;
+&lt;!-- * Any others? --&gt;
+
+
+&lt;!-- ![UI too hard](images/ui_too_difficult.gif) --&gt;
+
+&lt;!-- -- --&gt;
+
+&lt;!-- Maybe it means going back to the drawing board to re-assess your approach. --&gt;
+
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- [gif source](https://media4.giphy.com/media/J2zwN64xc4wgw/200.gif) --&gt;
+
+&lt;!-- --- --&gt;
+
+&lt;!-- # The strategy  --&gt;
+
+&lt;!-- &gt; "I want you to spend your precious cognitive resources on the specific details of your data, not on struggling to get R to do what you want. My long term goal is to create a [pit of success](https://quorasessionwithhadleywickham.quora.com/What-is-the-vision-behind-the-tidyverse) where the default path leads to a great result." - Hadley Wickham --&gt;
+
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- ![Pit of Success](images/pit.gif) --&gt;
+
+&lt;!-- -- --&gt;
+
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- How do we do this?  --&gt;
+
+&lt;!-- [gif source](https://i.makeagif.com/media/3-12-2016/m36Cqf.gif) --&gt;
+
+&lt;!-- --- --&gt;
+
+&lt;!-- # Measure, measure, measure --&gt;
+
+&lt;!-- * Before writing code &amp; at each iteration of the project, understand users:  --&gt;
+&lt;!--   * motivations --&gt;
+&lt;!--   * needs --&gt;
+&lt;!--   * environments --&gt;
+&lt;!--   * beliefs --&gt;
+&lt;!--   * complaints --&gt;
+
+
+&lt;!-- ![Measure](images/measure.jpg) --&gt;
+&lt;!-- -- --&gt;
+
+&lt;!-- * After the project launch, continue assessing. --&gt;
+
+&lt;!-- --- --&gt;
+&lt;!-- class: inverse, middle, center --&gt;
+
+&lt;!-- # What if... --&gt;
+
+&lt;!-- You have limited communication with end users? --&gt;
+
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- -- --&gt;
+
+&lt;!-- ### OR --&gt;
+
+&lt;!-- You aren't getting the whole story via user feedback? --&gt;
+
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- -- --&gt;
+
+&lt;!-- ## Trust me, you aren't! --&gt;
+
+&lt;!-- --- --&gt;
+
+&lt;!-- ## Enter: Shiny App Usage Tracking --&gt;
+
+&lt;!-- Every app should have it. Be able to answer questions like: --&gt;
+
+&lt;!-- * Is my app even being used? --&gt;
+
+&lt;!-- -- --&gt;
+
+&lt;!-- * How many users are there? --&gt;
+
+&lt;!-- -- --&gt;
+
+&lt;!-- * Is a specific person using my app (like the CEO)? --&gt;
+
+&lt;!-- -- --&gt;
+
+&lt;!-- * How often are they using it? --&gt;
+
+&lt;!-- -- --&gt;
+
+&lt;!-- * How long are they using it? --&gt;
+
+&lt;!-- -- --&gt;
+
+&lt;!-- * Which features or workflows are being used most/least? --&gt;
+
+&lt;!-- -- --&gt;
+
+&lt;!--   * Does that align with my expectations? --&gt;
+
+&lt;!-- -- --&gt;
+
+&lt;!--   * Do I need to enhance the user friendliness of certain widgets to increase the adoption of features? --&gt;
+
+&lt;!-- -- --&gt;
+
+&lt;!-- * Do I need to spend extra time marketing my application to my target users, or perhaps market certain features? --&gt;
+
+
+&lt;!-- --- --&gt;
+&lt;!-- class: inverse, center, middle --&gt;
+
+&lt;!-- # Tools --&gt;
+
+&lt;!-- There are many, and which one you choose will depend on your end goal --&gt;
+
+
+&lt;!-- --- --&gt;
+&lt;!-- # Today's learning objectives: --&gt;
+
+&lt;!-- .pull-left[ --&gt;
+&lt;!-- - Gain a general working knowledge of  --&gt;
+
+&lt;!--   - bit.ly (yep) --&gt;
+
+&lt;!--   - Google Analytics --&gt;
+
+&lt;!--   - Matomo Analytics --&gt;
+
+&lt;!--   - `{shinylogs}` --&gt;
+
+&lt;!--   - `{shiny.stats}` --&gt;
+
+&lt;!--   - RSConnect instrumentation data --&gt;
+&lt;!-- ] --&gt;
+
+&lt;!-- .pull-right[ --&gt;
+
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- .center[&lt;img src="images/tools.png" alt="tools" width="250"/&gt;] --&gt;
+&lt;!-- ] --&gt;
+
+&lt;!-- -- --&gt;
+
+&lt;!-- - Understand when &amp; where to use each tool --&gt;
+
+&lt;!-- -- --&gt;
+
+&lt;!-- - Encourage you: use them! --&gt;
+
+
+&lt;!-- --- --&gt;
+&lt;!-- class: inverse, center, middle --&gt;
+&lt;!-- # bit.ly --&gt;
+
+&lt;!-- Don't overlook the power of monitoring clicks! --&gt;
+
+&lt;!-- --- --&gt;
+
+&lt;!-- # bit.ly --&gt;
+
+&lt;!-- What is it? --&gt;
+
+&lt;!-- * Basically a free URL shortener that also counts URL clicks --&gt;
+
+&lt;!-- -- --&gt;
+
+&lt;!-- Why use it? --&gt;
+
+
+&lt;!-- * Know you if users are opening your app --&gt;
+
+&lt;!-- -- --&gt;
+
+&lt;!-- * Also great for conferences when demo-ing an app to measure audience engagement --&gt;
+
+&lt;!-- -- --&gt;
+
+&lt;!-- * Handy elsewhere - for example: on your app's documentation link(s)! --&gt;
+
+&lt;!-- -- --&gt;
+
+&lt;!-- When to use? --&gt;
+
+&lt;!-- * I'd recommend for public-facing URLs, since you don't want to "upload" a private URL to a public site like bit.ly. --&gt;
+
+&lt;!-- --- --&gt;
+
+&lt;!-- # How do I create a bit.ly link? --&gt;
+
+&lt;!-- Copy &amp; paste a (long) link into their link shortener, and customize the back half to start collecting stats! --&gt;
+
+&lt;!-- ![bit.ly example](images/bitly_example.PNG) --&gt;
+
+&lt;!-- ### Easy peasy --&gt;
+
+&lt;!-- --- --&gt;
+&lt;!-- class: inverse, center, middle --&gt;
+&lt;!-- # Google Analytics --&gt;
+
+&lt;!-- Google Analytics is a free service that collects information about who visits your website and what they do while they're there. --&gt;
+
+&lt;!-- -- --&gt;
+
+&lt;!-- Best used when you have a public facing app (i.e. shinyapps.io) --&gt;
+
+&lt;!-- --- --&gt;
+&lt;!-- # Google Analytics: Getting Started --&gt;
+
+&lt;!-- * Create an account (analytics.google.com) --&gt;
+
+&lt;!-- -- --&gt;
+
+&lt;!-- * Find your tracking code for your website (aka property) --&gt;
+
+&lt;!-- ```{js, eval = FALSE} --&gt;
+&lt;!-- /*&lt;!-- Global site tag (gtag.js) - Google Analytics --&gt;*/ --&gt;
+&lt;!-- &lt;script async src="https://www.googletagmanager.com/gtag/js?id=G-ThisIsNotReal"&gt; --&gt;
+&lt;!-- &lt;script&gt; --&gt;
+&lt;!--   window.dataLayer = window.dataLayer || []; --&gt;
+&lt;!--   function gtag(){dataLayer.push(arguments);} --&gt;
+&lt;!--   gtag('js', new Date()); --&gt;
+
+&lt;!--   gtag('config', 'G-ThisIsNotReal'); --&gt;
+&lt;!-- &lt;/script&gt; --&gt;
+&lt;!-- ``` --&gt;
+
+&lt;!-- --- --&gt;
+&lt;!-- # Google Analytics: Getting Started (cont'd) --&gt;
+
+&lt;!-- * Add it to the app --&gt;
+
+&lt;!-- ```{r, eval = FALSE} --&gt;
+&lt;!-- # somewhere inside the UI --&gt;
+&lt;!-- shiny::tags$head( --&gt;
+&lt;!--   shiny::tags$script( --&gt;
+&lt;!--     src = "https://www.googletagmanager.com/gtag/js?id=G-ThisIsNotReal", --&gt;
+&lt;!--     async = "" --&gt;
+&lt;!--   ), --&gt;
+&lt;!--   shiny::tags$script( --&gt;
+&lt;!--     src = "www/gtag.js" --&gt;
+&lt;!--   ) --&gt;
+&lt;!-- ) --&gt;
+&lt;!-- ``` --&gt;
+&lt;!-- --- --&gt;
+
+&lt;!-- # Google Analytics: Getting Started (cont'd) --&gt;
+
+&lt;!-- * Redeploy &amp; test --&gt;
+
+&lt;!-- After deployment &amp; visiting shiny app site, you may have to wait about 1 - 2 minutes (max) before data stream flowing into GA report. --&gt;
+
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- ![GA_visits](images/ga_first_time_usage.PNG) --&gt;
+&lt;!-- --- --&gt;
+&lt;!-- class: inverse, center, middle --&gt;
+&lt;!-- # Track events with GA --&gt;
+
+&lt;!-- Note: requires some javascript knowledge! --&gt;
+
+&lt;!-- --- --&gt;
+&lt;!-- # Tracking events w/ GA --&gt;
+
+&lt;!-- Let's say you have the following dropdown input, like in the [forest ranges shiny app](https://demo.prod.appsilon.ai/forest-ranges/). --&gt;
+
+&lt;!-- ```{r, eval=FALSE} --&gt;
+&lt;!-- shiny.semantic::dropdown_input( --&gt;
+&lt;!--   input_id = ns("tree_specie"), --&gt;
+&lt;!--   choices = c("Baltic Pine", "European silver fir", "Douglas fir"), --&gt;
+&lt;!--   choices_value = c("Pinus Slyvestris", "Abies Alba", "Albus Dumbledore"), --&gt;
+&lt;!--   default_text = "Tree species", --&gt;
+&lt;!--   value = "Douglas fir" --&gt;
+&lt;!-- ) --&gt;
+&lt;!-- ``` --&gt;
+&lt;!-- ### Finding an element --&gt;
+&lt;!-- `dropdown_input` generates a dropdown menu where each element has a class `item`, so since this is our only dropdown in the app, we can find this element pretty easily using `$('.item')` jQuery Syntax. --&gt;
+
+&lt;!-- --- --&gt;
+&lt;!-- ## Finding an element can be tough --&gt;
+
+&lt;!-- In chrome, right click on the element and select `inspect` to pull up the developer console. There, you can weed through the html looking for classes or `id`s specific to the element: --&gt;
+
+
+&lt;!-- ![inspect](images/inspect.PNG) --&gt;
+
+&lt;!-- --- --&gt;
+&lt;!-- # Add an event listener --&gt;
+
+&lt;!-- ```{js, eval=FALSE} --&gt;
+&lt;!-- $('.item').on('click', (event) =&gt; { --&gt;
+&lt;!--   const selectedSpecie = $(event.currentTarget).data().value; --&gt;
+&lt;!--   gtag('event', 'specie_selected', { --&gt;
+&lt;!--     selected_specie: selectedSpecie --&gt;
+&lt;!--   }); --&gt;
+&lt;!-- }); --&gt;
+&lt;!-- ``` --&gt;
+
+&lt;!-- **^^^ Sends the data to GA:** --&gt;
+
+&lt;!-- ![Event Tracked](images/ga_event_tracked.PNG) --&gt;
+
+&lt;!-- --- --&gt;
+&lt;!-- class: inverse, center, middle --&gt;
+&lt;!-- # Matomo Analytics --&gt;
+
+&lt;!-- Google Analytics, but open source, offering an on-prem opportunity. I suggest using when you have a private, enterprise app (i.e. internal Shiny Server or RS Connect). --&gt;
+
+&lt;!-- -- --&gt;
+
+&lt;!-- Basically the same approach as GA, so we'll skip the "how to". --&gt;
+
+
+&lt;!-- --- --&gt;
+&lt;!-- class: inverse, center, middle --&gt;
+&lt;!-- # {shinylogs} --&gt;
+
+
+
+&lt;!-- --- --&gt;
+
+&lt;!-- # `{shinylogs}` --&gt;
+
+&lt;!-- Logging tool for Shiny applications: record inputs or outputs changes, and info about user’s session. All recording is done client-side to not slow down the application and occupy the server. --&gt;
+
+&lt;!-- ### Install --&gt;
+&lt;!-- ```{r, eval=FALSE} --&gt;
+&lt;!-- # From CRAN --&gt;
+&lt;!-- install.packages("shinylogs")  --&gt;
+
+&lt;!-- # From Github --&gt;
+&lt;!-- remotes::install_github("dreamRs/shinylogs") --&gt;
+&lt;!-- ``` --&gt;
+
+
+&lt;!-- --- --&gt;
+
+&lt;!-- # `{shinylogs}` Usage --&gt;
+
+&lt;!-- Call the main function `track_usage()` in server part of application, and specify where to write logs: --&gt;
+
+&lt;!-- ```{r, eval=FALSE} --&gt;
+&lt;!-- # UI --&gt;
+&lt;!-- use_tracking() --&gt;
+
+&lt;!-- # server --&gt;
+&lt;!-- track_usage(storage_mode = store_json(path = "logs/")) --&gt;
+&lt;!-- ``` --&gt;
+
+&lt;!-- -- --&gt;
+
+
+&lt;!-- The function will record : --&gt;
+
+&lt;!-- * **inputs**: each time an input changes, the name, time stamp and value will be saved --&gt;
+&lt;!-- * **errors**: errors propagated through outputs --&gt;
+&lt;!-- * **outputs**: each time an output is re-generated --&gt;
+&lt;!-- * **session**: information about user’s browser and the application --&gt;
+
+
+&lt;!-- --- --&gt;
+
+&lt;!-- # `{shinylogs}` Storage modes  --&gt;
+&lt;!-- Six modes are available: --&gt;
+
+&lt;!-- * **store_json()**: store logs has separate JSON files (one by session). --&gt;
+
+&lt;!-- -- --&gt;
+
+&lt;!-- * **store_rds()**: store logs has individually RDS files (one by session). --&gt;
+
+&lt;!-- -- --&gt;
+
+&lt;!-- * **store_sqlite()**: store logs in a SQLite database. --&gt;
+
+&lt;!-- -- --&gt;
+
+&lt;!-- * **store_null()**: don’t write logs on disk, print them in R console. --&gt;
+
+&lt;!-- -- --&gt;
+
+&lt;!-- * **store_custom()**: use a custom function to save logs wherever you want. --&gt;
+
+&lt;!-- -- --&gt;
+
+&lt;!-- * **store_googledrive()**: store logs(as JSON files) in Googledrive. --&gt;
+
+
+&lt;!-- --- --&gt;
+&lt;!-- class: inverse, center, middle --&gt;
+&lt;!-- # Deployment with `{shinylogs}` --&gt;
+
+&lt;!-- Each storage mode comes in handy for different deployment environment. --&gt;
+
+&lt;!-- --- --&gt;
+&lt;!-- Deployment with `{shinylogs}` --&gt;
+&lt;!-- # Shiny server, RStudio Connect --&gt;
+
+&lt;!-- On a server, if you want to save logs on disk, don’t forget to set write permission on the folder you want to save logs. --&gt;
+
+&lt;!-- On RStudio Connect, you need to use an absolute path to specify the directory where to save logs. You can find more information here: [Persistent Storage on RStudio Connect](https://support.rstudio.com/hc/en-us/articles/360007981134-Persistent-Storage-on-RStudio-Connect). --&gt;
+
+&lt;!-- --- --&gt;
+&lt;!-- Deployment with `{shinylogs}` --&gt;
+&lt;!-- # shinyapps.io --&gt;
+
+&lt;!-- There’s no persistent data storage! So you can’t save logs as JSON or RDS files, you have to use a **remote storage method**. For example, you can send logs to Google Drive with store_googledrive or use store_custom to send logs wherever you want (dropbox, a remote database, etc…). --&gt;
+
+&lt;!-- To use Google Drive, you’ll need to work with Google’s API and set auth to your account, see [`{gargle}` documentation](https://gargle.r-lib.org/index.html) for examples and how to. --&gt;
+
+&lt;!-- --- --&gt;
+&lt;!-- Deployment with `{shinylogs}` --&gt;
+&lt;!-- # ShinyProxy --&gt;
+
+&lt;!-- With [ShinyProxy](https://www.shinyproxy.io/), you can use a Docker volume to write logs outside of the application container. In `application.yml`, you use can something like this in the specs describing the application: --&gt;
+
+&lt;!-- &gt; container-volumes: [ "/var/log/shinylogs:/root/logs" ] --&gt;
+
+&lt;!-- `/var/log/shinylogs` is a directory on the server where you deploy your applications with ShinyProxy. `/root/logs` is a directory inside your Docker image, it’s the path you can use in `track_usage()`, e.g. : --&gt;
+
+&lt;!-- ``` --&gt;
+&lt;!-- track_usage( --&gt;
+&lt;!--   storage_mode = store_json(path = "/root/logs") --&gt;
+&lt;!-- ) --&gt;
+&lt;!-- ``` --&gt;
+
+&lt;!-- --- --&gt;
+&lt;!-- class: inverse, center, middle --&gt;
+&lt;!-- # Information recorded by `{shinylogs}` --&gt;
+
+&lt;!-- --- --&gt;
+&lt;!-- ## Session Info --&gt;
+
+&lt;!-- Metadata about the application and the user’s browser: --&gt;
+
+&lt;!-- * **app**: name of the application --&gt;
+
+&lt;!-- * **user**: name of the user (if using Shiny-server pro for example) --&gt;
+
+&lt;!-- * **server_connected**: when application has been launched (server time) --&gt;
+
+&lt;!-- * **sessionid**: a session ID to match the session with other recorded tables --&gt;
+
+&lt;!-- * **server_disconnected**: when the application was disconnected (server time) --&gt;
+
+&lt;!-- * **user_agent**: browser user-agent --&gt;
+
+&lt;!-- * **screen_res**: resolution of the user screen (width x height) --&gt;
+
+&lt;!-- * **browser_res**: resolution of the user browser (width x height) --&gt;
+
+&lt;!-- * **pixel_ratio**: pixel ratio of the browser --&gt;
+
+&lt;!-- * **browser_connected**: when application has been launched. Uses browser time, which depends on user timezone. --&gt;
+
+&lt;!-- --- --&gt;
+&lt;!-- Information recorded by `{shinylogs}` --&gt;
+&lt;!-- ## Session: example --&gt;
+
+&lt;!-- ![Session Example](images/shinylogs session info.PNG) --&gt;
+&lt;!-- --- --&gt;
+&lt;!-- Information recorded by `{shinylogs}` --&gt;
+&lt;!-- ## Inputs --&gt;
+
+&lt;!-- Data about inputs, by default all inputs are recorded (even those not define by developer, like with {htmlwidgets} : {DT}, {leaflet}, …) --&gt;
+
+&lt;!-- * **sessionid**: the same ID as in session object --&gt;
+
+&lt;!-- * **name**: the inputs inputId --&gt;
+
+&lt;!-- * **timestamp**: timestamp when the input has changed --&gt;
+
+&lt;!-- * **value**: the value taken by the input (can be a list in case of complex input) --&gt;
+
+&lt;!-- * **type**: type of input (if defined) --&gt;
+
+&lt;!-- * **binding**: binding for the input (if defined) --&gt;
+
+&lt;!-- --- --&gt;
+&lt;!-- Information recorded by `{shinylogs}` --&gt;
+&lt;!-- ## Inputs: example --&gt;
+
+
+&lt;!-- ![Inputs Example](images/shinylogs inputs.PNG) --&gt;
+
+&lt;!-- --- --&gt;
+&lt;!-- Information recorded by `{shinylogs}` --&gt;
+&lt;!-- ## Outputs --&gt;
+
+&lt;!-- Data recorded each time an output is refreshed: --&gt;
+
+&lt;!-- * **sessionid**: the same ID as in session object --&gt;
+
+&lt;!-- * **name**: outputId of the output --&gt;
+
+&lt;!-- * **timestamp**: timestamp when the output has been updated --&gt;
+
+&lt;!-- * **type**: type of output (if defined) --&gt;
+
+&lt;!-- * **binding**: binding for the output (if defined) --&gt;
+
+&lt;!-- --- --&gt;
+&lt;!-- Information recorded by `{shinylogs}` --&gt;
+&lt;!-- ## Outputs: example --&gt;
+
+
+&lt;!-- ![Outputs Example](images/shinylogs outputs.PNG) --&gt;
+
+&lt;!-- --- --&gt;
+&lt;!-- Information recorded by `{shinylogs}` --&gt;
+&lt;!-- ## Errors --&gt;
+
+&lt;!-- Errors are recorded only when propagated through an output, this is the red message users see in application, info saved are: --&gt;
+
+&lt;!-- * **sessionid**: the same ID as in session object --&gt;
+
+&lt;!-- * **name**: outputId of the output where an error happened --&gt;
+
+&lt;!-- * **timestamp**: timestamp of the error --&gt;
+
+&lt;!-- * **error**: error message (if any) --&gt;
+
+&lt;!-- * **value**: additional data for the error (generally NULL) (if defined) --&gt;
+
+&lt;!-- --- --&gt;
+&lt;!-- Information recorded by `{shinylogs}` --&gt;
+&lt;!-- ## Errors: example --&gt;
+
+
+&lt;!-- ![Errors Example](images/shinylogs errors.PNG) --&gt;
+
+&lt;!-- --- --&gt;
+&lt;!-- class: inverse, center, middle --&gt;
+
+&lt;!-- # `{shiny.stats}` --&gt;
+
+&lt;!-- Yet another way to log user data --&gt;
+
+&lt;!-- --- --&gt;
+&lt;!-- # `{shiny.stats}` --&gt;
+
+&lt;!-- Easy way for logging users’ activity **and** creating a dashboard to ingest the data. The only requirement is that you have an accessible database, which can be as simple as a local PostgreSQL database or a sqlite file. --&gt;
+
+&lt;!-- First step is installation: --&gt;
+&lt;!-- ```{r, eval=FALSE} --&gt;
+&lt;!-- devtools::install_github("Appsilon/shiny.stats") --&gt;
+&lt;!-- ``` --&gt;
+
+&lt;!-- --- --&gt;
+&lt;!-- # `{shiny.stats}` Set up --&gt;
+
+
+&lt;!-- The next step is to initialize the database you want to use with shiny.stats. You should only do this once. The snippet below will connect to a sqlite database named user_stats: --&gt;
+
+&lt;!-- ```{r, eval=FALSE} --&gt;
+&lt;!-- connection &lt;- DBI::dbConnect(RSQLite::SQLite(), dbname = "user_stats.sqlite") --&gt;
+&lt;!-- DBI::dbDisconnect(connection) --&gt;
+&lt;!-- ``` --&gt;
+
+&lt;!-- --- --&gt;
+&lt;!-- # `{shiny.stats}` Set up (cont'd) --&gt;
+
+&lt;!-- Now comes the potentially tricky part (depending on how your app’s authentication is set up): you’ll need to define a function to extract the username. The below example will extract it from the URL, from a dedicated username parameter. --&gt;
+&lt;!-- ```{r, eval=FALSE} --&gt;
+&lt;!-- get_user &lt;- function(session) { --&gt;
+&lt;!--   parseQueryString(isolate(session$clientData$url_search))$username --&gt;
+&lt;!-- } --&gt;
+&lt;!-- ``` --&gt;
+
+&lt;!-- --- --&gt;
+&lt;!-- # `{shiny.stats}` Server Side Logic --&gt;
+
+&lt;!-- The magic happens in the server function where the database connection is established and user behavior is monitored: --&gt;
+
+&lt;!-- ```{r, eval=FALSE} --&gt;
+&lt;!-- # creates user connection list and ensures required tables exist in DB --&gt;
+&lt;!-- user_connection &lt;- initialize_connection(connection, --&gt;
+&lt;!--                                          username = get_user(session)) --&gt;
+
+&lt;!-- # register login --&gt;
+&lt;!-- log_login(user_connection) --&gt;
+
+&lt;!-- # register actions to watch... --&gt;
+&lt;!-- log_click(user_connection, id = "apply_slider") # button --&gt;
+&lt;!-- log_input(user_connection, input, input_id = "bins") # slider --&gt;
+
+&lt;!-- # registering logout --&gt;
+&lt;!-- log_logout(user_connection) --&gt;
+&lt;!-- ``` --&gt;
+
+&lt;!-- --- --&gt;
+&lt;!-- # View `{shiny.stats}` database --&gt;
+
+&lt;!-- Open the sqlite file in your favorite database management tool --&gt;
+
+&lt;!-- ![shiny.stats view db](images/shiny.stats tableplus.png) --&gt;
+&lt;!-- --- --&gt;
+&lt;!-- # Built-in `{shiny.stats}` dashboard --&gt;
+
+&lt;!-- The most handy feature of `{shiny.stats}`? You can easily display users’ stats in an R Shiny dashboard. The following example code snippet creates a dashboard that allows you to monitor user adoption: --&gt;
+
+&lt;!-- ```{r, eval=FALSE} --&gt;
+&lt;!-- library(shiny);library(RSQLite);library(shiny.stats); --&gt;
+
+&lt;!-- # prepare credentials list to access logs: --&gt;
+&lt;!-- db_credentials &lt;- list(DB_NAME = "user_stats.sqlite", --&gt;
+&lt;!--                        DB_DRIVER = "SQLite") --&gt;
+
+&lt;!-- # define function for extracting username --&gt;
+&lt;!-- get_user &lt;- function(session) { --&gt;
+&lt;!--   username &lt;- isolate(parseQueryString(session$clientData$url_search)$username) --&gt;
+&lt;!--   req(username) --&gt;
+&lt;!--   return(username) --&gt;
+&lt;!-- } --&gt;
+
+&lt;!-- # define ui and server --&gt;
+&lt;!-- ui &lt;- shiny_stats_ui() --&gt;
+&lt;!-- server &lt;- shiny_stats_server(get_user, db_credentials = db_credentials) --&gt;
+&lt;!-- shinyApp(ui = ui, server = server, --&gt;
+&lt;!--          options = list(port = 8887, launch.browser = FALSE)) --&gt;
+&lt;!-- ``` --&gt;
+&lt;!-- --- --&gt;
+&lt;!-- ## Example `{shiny.stats}` dashboard --&gt;
+
+
+&lt;!-- ![shiny.stats view db](images/shiny.stats dashboard.png) --&gt;
+&lt;!-- --- --&gt;
+&lt;!-- class: inverse, center, middle --&gt;
+
+&lt;!-- # RSConnect Instrumentation Data --&gt;
+
+&lt;!-- --- --&gt;
+
+&lt;!-- # Extending Connect with the Server API --&gt;
+
+&lt;!-- The [Server API](https://docs/rstudio.com/connect/api) comes with the RSConnect product (automatically). I.E. this is NOT an API you develop with plumber, flask, etc. --&gt;
+
+&lt;!-- Resources: --&gt;
+&lt;!-- * [Documentation](https://docs/rstudio.com/connect/api) --&gt;
+&lt;!-- * [Cookbook](https://docs.rstudio.com/connect/cookbook) --&gt;
+&lt;!-- * [R Client](https://pkgs.rstudio.com/connectapi/) - `{connectapi}` not on CRAN (yet) --&gt;
+
+
+&lt;!-- ```{r, eval=FALSE} --&gt;
+&lt;!-- remotes::install_github('rstudio/connectapi') --&gt;
+&lt;!-- ``` --&gt;
+
+&lt;!-- -- --&gt;
+
+&lt;!-- ## Teaser --&gt;
+&lt;!-- Future goal of `{connectapi}` - anything clickable in the UI can be mimicked programmatically via the API. --&gt;
+
+&lt;!-- --- --&gt;
+&lt;!-- # The API's instrumentation data can answer... --&gt;
+
+&lt;!-- * How many reports/apps on the server? --&gt;
+
+&lt;!-- * Which users have access? --&gt;
+
+&lt;!-- * Who looked at this report recently? --&gt;
+
+&lt;!-- * What's the cadence of their visits? --&gt;
+
+&lt;!-- * How long do they stay? --&gt;
+
+&lt;!-- -- --&gt;
+
+&lt;!-- And the Rstudio team is working on many experimental feature requests as we speak. --&gt;
+
+&lt;!-- --- --&gt;
+&lt;!-- # Connect to the Connect Server API --&gt;
+
+&lt;!-- ```{r, eval=FALSE} --&gt;
+&lt;!-- library(connectapi) --&gt;
+
+&lt;!-- client &lt;- connect( --&gt;
+&lt;!--   server = 'https://connect.example.com', --&gt;
+&lt;!--   api_key = '&lt;SUPER SECRET API KEY&gt;' --&gt;
+&lt;!-- ) --&gt;
+
+&lt;!-- # OR, if your server is defined by your environment variables, run: --&gt;
+&lt;!-- client &lt;- connect() --&gt;
+&lt;!-- ``` --&gt;
+
+&lt;!-- If your role is "Publisher", you only get access to your content hosted on RSConnect! The "Admin" role gives you access to all content. --&gt;
+
+&lt;!-- ```{r, eval=FALSE} --&gt;
+&lt;!-- users &lt;- get_users(client) # email, username, first &amp; last name, role, guid --&gt;
+&lt;!-- groups &lt;- get_groups(client) # group info - guid &amp; group name --&gt;
+&lt;!-- usage_shiny &lt;- get_usage_shiny(client) # content &amp; user guids, start and stop times --&gt;
+&lt;!-- usage_static &lt;- get_usage_static(client) # content &amp; user guids, timestamp visited --&gt;
+&lt;!-- some_content &lt;- get_content(client) # guid, content's name, title, description, etc --&gt;
+
+&lt;!-- # get all content --&gt;
+&lt;!-- all_content &lt;- get_content(client, limit = Inf) --&gt;
+&lt;!-- ``` --&gt;
+
+
+
+&lt;!-- --- --&gt;
+&lt;!-- # Example Instrumentation Data --&gt;
+
+&lt;!-- For a shiny app: --&gt;
+
+&lt;!-- ```{r, eval=FALSE} --&gt;
+&lt;!-- usage_shiny &lt;- get_usage_shiny(client) # content &amp; user guids, start and stop times --&gt;
+&lt;!-- ``` --&gt;
+
+&lt;!-- ![Example Instrumentation Data](images/instrumentation_data_shiny.PNG) --&gt;
+
+&lt;!-- --- --&gt;
+
+&lt;!-- ## Example Instrumentation Dashboard --&gt;
+
+&lt;!-- ![Example Instrumentation Dashboard](images/instrumentation_flexdashboard.PNG) --&gt;
+
+&lt;!-- [GitHub Repo](https://github.com/sol-eng/connect-usage) --&gt;
+&lt;!-- --- --&gt;
+
+&lt;!-- ## Example Instrumentation Shiny App --&gt;
+
+&lt;!-- ![Example Instrumentation Shiny App](images/instrumentation_data_shinyapp.PNG) --&gt;
+
+&lt;!-- App: https://colorado.rstudio.com/rsc/usage-interactive/ --&gt;
+
+&lt;!-- [GitHub Repo](https://github.com/sol-eng/connect-usage) --&gt;
+
+&lt;!-- --- --&gt;
+&lt;!-- class: inverse, center, middle --&gt;
+&lt;!-- # Phew! Tool Review complete. --&gt;
+
+&lt;!-- --- --&gt;
+&lt;!-- # In Review --&gt;
+
+&lt;!-- - Did you gain a general working knowledge of  --&gt;
+
+&lt;!--   - bit.ly (yep) --&gt;
+
+&lt;!--   - Google Analytics --&gt;
+
+&lt;!--   - Matomo Analytics --&gt;
+
+&lt;!--   - `{shinylogs}` --&gt;
+
+&lt;!--   - `{shiny.stats}` --&gt;
+
+&lt;!--   - RSConnect instrumentation data --&gt;
+
+&lt;!-- -- --&gt;
+
+&lt;!-- - I hope you feel encouraged! --&gt;
+
+&lt;!-- -- --&gt;
+
+&lt;!-- - **Measuring** your app's usage make you a well informed developer! --&gt;
+
+&lt;!-- --- --&gt;
+&lt;!-- # My Resources --&gt;
+
+&lt;!-- * [R Shiny Google Analytics: How to add GA to shiny Apps](https://appsilon.com/r-shiny-google-analytics/) By Appsilon --&gt;
+&lt;!-- * [Top 3 Tools to Monitor User Adoption in R Shiny](https://appsilon.com/monitoring-r-shiny-user-adoption/#shiny-stats) By Appsilon --&gt;
+&lt;!-- * [`{shinylogs}` Documentation](https://dreamrs.github.io/shinylogs/index.html) --&gt;
+&lt;!-- * [`{connectapi}` Documentation](https://awshpc22133.abc.amazon.biogen.com/IDEA/) --&gt;
+&lt;!-- * [Youtube: Shiny Usage Tracking in RStudio Connect](https://www.youtube.com/watch?v=0iljqY9j64U) By Cole Arendt @ Rstudio --&gt;
+
+&lt;!-- --- --&gt;
+&lt;!-- class: inverse, center, middle --&gt;
+&lt;!-- Thank you! --&gt;
+
+&lt;!-- # Questions? --&gt;
+
+
+
+
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightLines": true,
+"highlightLanguage": "R",
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
