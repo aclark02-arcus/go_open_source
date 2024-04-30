@@ -169,7 +169,7 @@ https://code-review.tidyverse.org/
 - Style Guides
 
 **GitHub Projects**
-Stay organized with issues, milestones, etc.
+- Stay organized with issues, milestones, etc.
 - Example: [{tidyCDISC}](https://github.com/orgs/Biogen-Inc/projects/1) has a public one, but it's old so all the tasks are complete.
 ---
 
